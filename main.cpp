@@ -1,9 +1,12 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
-
+#include <random>
 int main()
 {
+    std::random_device rseed;
+    std::mt19937 rgen(rseed()); // mersenne_twister
+    std::uniform_int_distribution<int> idist(0,10); // [0,100]
     const double proc1 = 0.4;
     const double proc2 = 0.6;
     std::string name;
@@ -19,7 +22,9 @@ int main()
     for(int i = 0; i < quantity; i++)
     {
         std::cout << "Enter homework nr. " << i + 1 << ": ";
-        std::cin >> Hgrade[i];
+        //std::cin >> Hgrade[i];
+        Hgrade[i] = idist(rgen);
+        std::cout << Hgrade[i] << std::endl;
     }
     double Egrade;
     std::cout << "Enter exam grade: ";
@@ -44,7 +49,7 @@ int main()
         {
            // vidurkisg = median(Hgrade);
         }
-        if(option < 0 || option > 2)
+        if(option != 1 && option != 2)
         {
             std::cout << "There is no such option please choose again." << std::endl;
             option = 0;
