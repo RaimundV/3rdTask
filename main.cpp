@@ -2,11 +2,12 @@
 #include <string>
 #include <iomanip>
 #include <random>
+#include <stdio.h>
 int main()
 {
     std::random_device rseed;
     std::mt19937 rgen(rseed()); // mersenne_twister
-    std::uniform_int_distribution<int> idist(0,10); // [0,100]
+    std::uniform_int_distribution<int> idist(1,10); // [1,10]
     const double proc1 = 0.4;
     const double proc2 = 0.6;
     std::string name;
@@ -26,12 +27,15 @@ int main()
         Hgrade[i] = idist(rgen);
         std::cout << Hgrade[i] << std::endl;
     }
+
     double Egrade;
     std::cout << "Enter exam grade: ";
     std::cin >> Egrade;
     int option = 0;
     double vidurkisg = 0;
     double vidurkis = 0;
+    int number = 0;
+
     while(option == 0)
     {
         std::cout << "1. Count as vidurkis\n 2. Count as mediana\n Enter option: ";
@@ -43,19 +47,48 @@ int main()
                 vidurkisg += Hgrade[i];
             }
             vidurkisg /= quantity;
-            vidurkis = proc1 * vidurkisg + proc2 * Egrade;
         }
         if(option == 2)
         {
-           // vidurkisg = median(Hgrade);
+            double small = 0;
+            double big = 0;
+            for(int i = 0; i < quantity - 1; i++)
+            {
+                for(int j = 0; j < quantity; j++)
+                {
+                    if(j > i)
+                    {
+                        if(Hgrade[i] > Hgrade[j])
+                        {
+                            big = Hgrade[i];
+                            small = Hgrade[j];
+                            Hgrade[i] = small;
+                            Hgrade[j] = big;
+                        }
+                    }
+                }
+            }
+            if(quantity % 2 == 0)
+            {
+                number = quantity / 2;
+                vidurkisg = (Hgrade[number - 1] + Hgrade[number]) / 2;
+            }
+            else
+            {
+                number = quantity / 2;
+                vidurkisg = Hgrade[number];
+            }
         }
         if(option != 1 && option != 2)
         {
             std::cout << "There is no such option please choose again." << std::endl;
             option = 0;
         }
+        vidurkis = proc1 * vidurkisg + proc2 * Egrade;
+
     }
     std::cout << std::setprecision(3) << vidurkis;
 
     return 0;
 }
+

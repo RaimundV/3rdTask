@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1518512529 source:c:\users\123\desktop\vu\oop\darbas2\main.cpp
+1518514973 source:c:\users\123\desktop\vu\oop\darbas2\main.cpp
 	<iostream>
 	<string>
 	<iomanip>
 	<random>
+	<stdio.h>
 
