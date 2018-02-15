@@ -3,10 +3,12 @@
 #include <iomanip>
 #include <random>
 #include <stdio.h>
+#include <time.h>
+
 int main()
 {
     std::random_device rseed;
-    std::mt19937 rgen(rseed()); // mersenne_twister
+    std::mt19937 rgen(rseed()*time(0)); // mersenne_twister
     std::uniform_int_distribution<int> idist(1,10); // [1,10]
     const double proc1 = 0.4;
     const double proc2 = 0.6;
@@ -20,25 +22,46 @@ int main()
     std::cout << "Enter the quantity of the students homework: ";
     std::cin >> quantity;
     double Hgrade[quantity];
-    for(int i = 0; i < quantity; i++)
+    int option = 0;
+    while(option == 0)
     {
-        std::cout << "Enter homework nr. " << i + 1 << ": ";
-        //std::cin >> Hgrade[i];
-        Hgrade[i] = idist(rgen);
-        std::cout << Hgrade[i] << std::endl;
+        std::cout << "1. Enter grades yourself\n2. Enter random grades\nEnter option: ";
+        std::cin >> option;
+        if(option == 1 || option == 2)
+        {
+            for(int i = 0; i < quantity; i++)
+            {
+                std::cout << "Enter homework nr. " << i + 1 << ": ";
+                if(option == 1)
+                {
+                    std::cin >> Hgrade[i];
+                }
+                else
+                {
+                    Hgrade[i] = idist(rgen);
+                    std::cout << Hgrade[i] << std::endl;
+                }
+                //std::cout << Hgrade[i] << std::endl;
+            }
+        }
+        else
+        {
+            std::cout << "There is no such option. Please choose an existing option." << std::endl;
+            option = 0;
+        }
     }
 
     double Egrade;
     std::cout << "Enter exam grade: ";
     std::cin >> Egrade;
-    int option = 0;
+    option = 0;
     double vidurkisg = 0;
     double vidurkis = 0;
     int number = 0;
 
     while(option == 0)
     {
-        std::cout << "1. Count as vidurkis\n 2. Count as mediana\n Enter option: ";
+        std::cout << "1. Count as vidurkis\n2. Count as mediana\nEnter option: ";
         std::cin >> option;
         if(option == 1)
         {
