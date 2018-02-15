@@ -4,6 +4,7 @@
 #include <random>
 #include <stdio.h>
 #include <time.h>
+#include <vector>
 
 int main()
 {
@@ -19,38 +20,74 @@ int main()
     std::cout << "Enter your surname: ";
     std::cin >> surname;
     int quantity = 0;
-    std::cout << "Enter the quantity of the students homework: ";
-    std::cin >> quantity;
-    double Hgrade[quantity];
-    int option = 0;
-    while(option == 0)
+    int option2 = 0;
+    while (option2 == 0)
     {
-        std::cout << "1. Enter grades yourself\n2. Enter random grades\nEnter option: ";
-        std::cin >> option;
-        if(option == 1 || option == 2)
+        std::cout << "1. Enter an unlimited amount of grades\n2. Enter a limited amount of grades\nEnter option: ";
+        std::cin >> option2;
+        if (option2 == 1 || option2 == 2)
         {
-            for(int i = 0; i < quantity; i++)
-            {
-                std::cout << "Enter homework nr. " << i + 1 << ": ";
-                if(option == 1)
-                {
-                    std::cin >> Hgrade[i];
-                }
-                else
-                {
-                    Hgrade[i] = idist(rgen);
-                    std::cout << Hgrade[i] << std::endl;
-                }
-                //std::cout << Hgrade[i] << std::endl;
-            }
+            break;
         }
         else
         {
             std::cout << "There is no such option. Please choose an existing option." << std::endl;
-            option = 0;
+            option2 = 0;
         }
     }
 
+
+    std::vector<double> Hgrade/*[quantity]*/;
+    int d = 0;
+    int option = 0;
+    if(option2 == 1)
+    {
+        double stop = 0;
+        do
+        {
+            int c = 1;
+            std::cout << "Enter homework nr." << c << ": ";
+            std::cin >> d;
+            std::cout << "(Enter 0 if you have entered all of your grades)" << std::endl;
+            c++;
+            quantity = c;
+            Hgrade.push_back(d);
+        }while (stop != d);
+
+    }
+    else
+    {
+        std::cout << "Enter the quantity of the students homework: ";
+        std::cin >> quantity;
+        while(option == 0)
+        {
+            std::cout << "1. Enter grades yourself\n2. Enter random grades\nEnter option: ";
+            std::cin >> option;
+            if(option == 1 || option == 2)
+            {
+                for(int i = 0; i < quantity; i++)
+                {
+                    std::cout << "Enter homework nr. " << i + 1 << ": ";
+                    if(option == 1)
+                    {
+                        std::cin >> d;
+                        Hgrade.push_back(d);
+                    }
+                    else
+                    {
+                        Hgrade.push_back(idist(rgen));
+                        std::cout << Hgrade[i] << std::endl;
+                    }
+                    //std::cout << Hgrade[i] << std::endl;
+                }
+            }
+            else
+            {
+                std::cout << "There is no such option. Please choose an existing option." << std::endl;
+                option = 0;
+            }
+        }
+    }
     double Egrade;
     std::cout << "Enter exam grade: ";
     std::cin >> Egrade;
