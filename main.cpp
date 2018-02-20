@@ -125,9 +125,8 @@ int main()
 
     if(option3 == 1)
     {
-        std::random_device rd;
-        std::mt19937 mt(rd()*static_cast<long unsigned int>(std::chrono::duration_cast<std::chrono::milliseconds>
-        (std::chrono::system_clock::now().time_since_epoch()).count())); // mersenne_twister
+        std::random_device rseed;
+        std::mt19937 rgen(rseed()*time(0)); // mersenne_twister
         std::uniform_int_distribution<int> idist(1,10); // [1,10]
         std::string name;
         std::string surname;
@@ -191,7 +190,7 @@ int main()
                         }
                         else
                         {
-                            Hgrade.push_back(idist(rd));
+                            Hgrade.push_back(idist(rgen));
                             std::cout << Hgrade[i] << std::endl;
                         }
                         //std::cout << Hgrade[i] << std::endl;
