@@ -126,7 +126,8 @@ int main()
     if(option3 == 1)
     {
         std::random_device rseed;
-        std::mt19937 rgen(rseed()*time(0)); // mersenne_twister
+        std::mt19937 rgen(rseed()*static_cast<long unsigned int>(std::chrono::high_resolution_clock::now().
+        time_since_epoch().count())); // mersenne_twister
         std::uniform_int_distribution<int> idist(1,10); // [1,10]
         std::string name;
         std::string surname;
