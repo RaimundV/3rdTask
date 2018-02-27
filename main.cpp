@@ -24,14 +24,14 @@ int main()
 
     if(option3 == 2) //ask????????
     {
-        try
-        {
+        //try
+        //{
             fun(homeworkquantity, proc1, proc2);
-        }
-        catch(int why)
+        /*}
+        catch(std::exception const& e)
         {
-            std::cout << "The file does not exist" << why << std::endl;
-        }
+            std::cout << "There was an error: " << e.what() << std::endl;
+        }*/
     }
 
     if(option3 == 1)
