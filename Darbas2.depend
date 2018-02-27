@@ -1,8 +1,20 @@
 # depslib dependency file v1.0
-1518514973 source:c:\users\123\desktop\vu\oop\darbas2\main.cpp
+1519716505 source:c:\users\123\desktop\vu\oop\darbas2\main.cpp
+	"fun.h"
+
+1519561195 source:c:\users\123\desktop\vu\oop\darbas2\filefunction.cpp
+	"fun.h"
+
+1519716265 c:\users\123\desktop\vu\oop\darbas2\fun.h
 	<iostream>
 	<string>
 	<iomanip>
 	<random>
 	<stdio.h>
+	<time.h>
+	<vector>
+	<fstream>
+	<algorithm>
+	<chrono>
+	<exception>
 
