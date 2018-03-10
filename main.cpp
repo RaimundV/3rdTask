@@ -24,14 +24,7 @@ int main()
 
     if(option3 == 2) //ask????????
     {
-        //try
-        //{
-            fun(homeworkquantity, proc1, proc2);
-        /*}
-        catch(std::exception const& e)
-        {
-            std::cout << "There was an error: " << e.what() << std::endl;
-        }*/
+        fun(homeworkquantity, proc1, proc2);
     }
 
     if(option3 == 1)

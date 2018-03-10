@@ -7,6 +7,7 @@ struct Grades
     double exam;
     double AVGmedian;
     double AVGaverage;
+    //std::string Type;
     bool operator()(const Grades& lhs, const Grades& rhs) const { lhs.Surname < rhs.Surname; }
 };
 

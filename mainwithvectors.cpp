@@ -73,7 +73,7 @@ int main()
             if(d > 0)
             {
                 quantity = c + 1;
-                std::cout << "quantity " << quantity << std::endl;
+                //std::cout << "quantity " << quantity << std::endl;
             }
             if(d > 0)
             {

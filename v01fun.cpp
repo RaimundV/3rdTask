@@ -12,16 +12,22 @@ void fun2(double proc1, double proc2)
     std::string surname;
     int quantity = 0;
     int option2 = 0;
+    std::ofstream file;
+    file.open("v01AVG.txt");
+    file << std::setw(15) << "Surname" << std::setw(15) << "Name" << std::setw(20) << "Status" << std::setw(20) << "AVG\n";
     do
     {
         std::cout << "Enter your name: ";
         std::cin >> name;
         std::cout << "Enter your surname: ";
         std::cin >> surname;
+        file << std::setw(15) << surname << std::setw(15) << name;
         while (option2 == 0) //checks how the user wants to enter the grades limited/unlimited
         {
             std::cout << "1. Enter an unlimited amount of grades\n2. Enter a limited amount of grades\nEnter option: ";
             std::cin >> option2;
+            std::cin.ignore(1000, '\n');
+            if(!(cin))
             if (option2 == 1 || option2 == 2)
             {
                 break;
@@ -32,8 +38,6 @@ void fun2(double proc1, double proc2)
                 option2 = 0;
             }
         }
-
-
 
         std::vector<double> Hgrade;
         int d = 0;
@@ -89,9 +93,6 @@ void fun2(double proc1, double proc2)
                 }
             }
         }
-        double Egrade;
-        std::cout << "Enter exam grade: ";
-        std::cin >> Egrade;
         option = 0;
         double vidurkisg = 0;
         double vidurkis = 0;
@@ -145,10 +146,26 @@ void fun2(double proc1, double proc2)
                 std::cout << "There is no such option please choose again." << std::endl;
                 option = 0;
             }
-            vidurkis = proc1 * vidurkisg + proc2 * Egrade;
 
         }
-        std::cout << "The grade is: " << std::setprecision(3) << vidurkis << std::endl;;
+
+        if (vidurkisg >= 6.0)
+        {
+            std::cout << "The student is qualified for the exam" << std::endl;
+
+            double Egrade;
+            std::cout << "Enter exam grade: ";
+            std::cin >> Egrade;
+            vidurkis = proc1 * vidurkisg + proc2 * Egrade;
+            file << std::setw(20) << "Champ" << std::setw(19) << vidurkis << std::endl;
+            std::cout << "The grade is: " << std::setprecision(3) << vidurkis << std::endl;
+        }
+        else
+        {
+            std::cout << "The student is not qualified for the exam" << std::endl;
+            file << std::setw(20) << "Loser\n";
+        }
+
         do
         {
             std::cout << "Do you want to continue?\n1. Yes\n2. No\n";
