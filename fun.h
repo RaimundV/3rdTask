@@ -15,6 +15,7 @@
 
 void fun(int homeworkquantity, double proc1, double proc2);
 void fun2(double proc1, double proc2);
-//double average()
+int  Check();
+int  GradeCheck();
 
 #endif
