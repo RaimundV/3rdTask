@@ -28,7 +28,7 @@ void fun2(double proc1, double proc2)
         while (option2 != 1 && option2 != 2) //checks how the user wants to enter the grades limited/unlimited
         {
             std::cout << "1. Enter an unlimited amount of grades\n2. Enter a limited amount of grades\nEnter option: ";
-            option2 = Check();
+            option2 = Check(1, 2);
         }
 
         std::vector<double> Hgrade;
@@ -95,7 +95,7 @@ void fun2(double proc1, double proc2)
             while(option == 0)
             {
                 std::cout << "1. Enter grades yourself\n2. Enter random grades\nEnter option: ";
-                option = Check();
+                option = Check(1, 2);
                 if(option == 1 || option == 2)
                 {
                     for(int i = 0; i < quantity; i++)
@@ -128,7 +128,7 @@ void fun2(double proc1, double proc2)
         while(option == 0) // choose to count avg or median
         {
             std::cout << "1. Count as average\n2. Count as median\nEnter option: ";
-            option = Check();
+            option = Check(1, 2);
             if(option == 1) // avg
             {
                 for(int i = 0; i < quantity; i++)
@@ -184,7 +184,7 @@ void fun2(double proc1, double proc2)
         do
         {
             std::cout << "Do you want to continue?\n1. Yes\n2. No\n";
-            answer = Check();
+            answer = Check(1, 2);
         }while(answer != 1 && answer != 2);
     }while(answer == 1);
 }

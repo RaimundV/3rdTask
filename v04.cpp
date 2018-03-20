@@ -1,34 +1,11 @@
-#include <iostream>
-#include <fstream>
-#include <chrono>
-#include <ctime>
-#include <random>
-#include <string>
-#include <sstream>
-#include <algorithm>
-#include <iomanip>
-
-struct Student
-{
-    std::string name;
-    std::string surname;
-    std::vector<int> Hgrade;
-    int Egrade;
-    std::string type;
-    //bool operator()(const Student& lhs, const Student& rhs) const { lhs.type > rhs.type; }
-};
-
-bool compareByLength(const Student &a, const Student &b)
-{
-    return a.type < b.type;
-}
+#include "sorting.h"
 
 void Random(size_t quantity, std::string k)
 {
     using namespace std::chrono;
     std::vector<Student> s;
     std::random_device rseed;
-    std::mt19937 rgen(rseed()*static_cast<long unsigned int>(std::chrono::high_resolution_clock::now().
+    std::mt19937 rgen(rseed()/1000*static_cast<long unsigned int>(std::chrono::high_resolution_clock::now().
     time_since_epoch().count())); // mersenne_twister
     std::uniform_int_distribution<int> idist(1,10); // [1,10]
     std::ofstream file;
@@ -70,7 +47,7 @@ void Random(size_t quantity, std::string k)
 }
 
 
-int main()
+void print()
 {
     using namespace std::chrono;
     size_t quantity = 0;
@@ -103,6 +80,5 @@ int main()
     t2 = high_resolution_clock::now();
     time_span = t2 - t1;
     std::cout << "wow5.txt generated in: " << time_span.count()/1000 << " seconds." << std::endl;
-    return 0;
 }
 

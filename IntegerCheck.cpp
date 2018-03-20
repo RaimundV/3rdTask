@@ -1,6 +1,6 @@
 #include "fun.h"
 
-int Check()
+int Check(int a, int b)
 {
     int option3;
     if (!(std::cin >> option3))
@@ -9,7 +9,7 @@ int Check()
         std::cin.ignore(10000,'\n');
     }
 
-    if (option3 == 1 || option3 == 2)
+    if (option3 >=a && option3 <=b)
     {
         //break;
     }

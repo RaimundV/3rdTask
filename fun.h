@@ -6,16 +6,16 @@
 #include <iomanip>
 #include <random>
 #include <stdio.h>
-#include <time.h>
+#include <ctime>
 #include <vector>
 #include <fstream>
 #include <algorithm>
 #include <chrono>
-#include <exception>
 
 void fun(int homeworkquantity, double proc1, double proc2);
 void fun2(double proc1, double proc2);
-int  Check();
+int  Check(int a, int b);
 int  GradeCheck();
+void PerformanceCheck();
 
 #endif
