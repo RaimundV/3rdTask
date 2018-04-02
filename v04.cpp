@@ -1,3 +1,4 @@
+#include "functions.h"
 #include "sorting.h"
 
 void Random(size_t quantity, std::string k)

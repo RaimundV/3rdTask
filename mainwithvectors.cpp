@@ -23,7 +23,7 @@ void fun(double *o, double p, int u, size_t *nu)
     }
 }
 
-int main()
+int change()
 {
     std::random_device rd;
     std::mt19937 mt(rd() /* std::static_cast<long unsigned int>(std::chrono::high_resolution_clock::now().time_since_epoch().count)*/); // mersenne_twister

@@ -1,6 +1,7 @@
 
 #include "fun.h"
 #include "sorting.h"
+#include "functions.h"
 int main()
 {
     int homeworkquantity = 5;
@@ -9,8 +10,9 @@ int main()
     int option3 = 0;
     do
     {
-        std::cout << "1. Enter grades yourself\n2. Get grades from table\n3. Generate student files\n4. Check performance\nEnter option: ";
-        option3 = Check(1, 4);
+        std::cout << "1. Enter grades yourself\n2. Get grades from table\n3. Generate student files\n"
+                "4. Check performance\n5. Check containers\nEnter option: ";
+        option3 = Check(1, 5);
 
         if(option3 == 2)
         {
@@ -28,6 +30,10 @@ int main()
         if(option3 == 4)
         {
             PerformanceCheck();
+        }
+        if(option3 == 5)
+        {
+            ContainerPerformanceCheck();
         }
 
         std::cout << "Do you want to continue?\n1. Yes\n2. No\n";

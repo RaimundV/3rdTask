@@ -1,4 +1,5 @@
 #include "fun.h"
+#include "functions.h"
 
 int GradeCheck()
 {

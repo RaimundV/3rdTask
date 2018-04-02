@@ -1,4 +1,6 @@
 #include "fun.h"
+#include "functions.h"
+
 struct Grades
 {
     std::string Surname;
