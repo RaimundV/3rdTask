@@ -18,4 +18,4 @@ add_executable(Darbas2
         v05.cpp
         v05Deque.cpp
         v05List.cpp
-        v05Vector.cpp v1.cpp functions.h containerV.cpp containerD.cpp containerL.cpp)
+        v05Vector.cpp v1.cpp functions.h containerV.cpp containerD.cpp containerL.cpp functionsD.h functionsL.h struct.h)

@@ -1,5 +1,7 @@
-#include "functions.h"
 #include "sorting.h"
+
+//#include "struct.h"
+#include "struct.h"
 
 void Random(size_t quantity, std::string k)
 {

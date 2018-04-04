@@ -17,6 +17,6 @@ void fun2(double proc1, double proc2);
 int  Check(int a, int b);
 int  GradeCheck();
 void PerformanceCheck();
-void ContainerPerformanceCheck();
+void ContainerPerformanceCheck(int option);
 
 #endif

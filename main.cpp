@@ -11,8 +11,8 @@ int main()
     do
     {
         std::cout << "1. Enter grades yourself\n2. Get grades from table\n3. Generate student files\n"
-                "4. Check performance\n5. Check containers\nEnter option: ";
-        option3 = Check(1, 5);
+                "4. Check performance\n5. Check container performance\n6. Check container performance without arguments\nEnter option: ";
+        option3 = Check(1, 6);
 
         if(option3 == 2)
         {
@@ -31,9 +31,9 @@ int main()
         {
             PerformanceCheck();
         }
-        if(option3 == 5)
+        if(option3 == 5 || option3 == 6)
         {
-            ContainerPerformanceCheck();
+            ContainerPerformanceCheck(option3);
         }
 
         std::cout << "Do you want to continue?\n1. Yes\n2. No\n";

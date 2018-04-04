@@ -1,5 +1,7 @@
 #include "sorting.h"
-#include "functions.h"
+
+#include "struct.h"
+
 /*bool compareByType(const Student &a, const Student &b)
 {
     return a.type < b.type;
