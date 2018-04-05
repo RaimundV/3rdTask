@@ -1,5 +1,9 @@
 # Second OOP Task
 
+### Vertinimas
+
+Pataise header failus ir pridejo 13 uzduoties laikus. Visa kita buvo puikiai.
+
 ## Installing
 
 1. Download the zip file.
