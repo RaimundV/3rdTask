@@ -1,14 +1,21 @@
 #include "sorting.h"
-#include "struct.h"
+//#include "struct.h"
 bool compareByType(const Student &a, const Student &b)
 {
-    return a.type < b.type;
+    return a.typeo() < b.typeo();
 }
 
 void Sorting(size_t quantity, std::string k, std::string w)
 {
-    std::vector<Student> s;
+    //Student::Student();
+
+
     int grade;
+    std::string name;
+    std::string surname;
+    std::string type;
+    int grade2;
+    std::vector<Student> s;
     using namespace std::chrono;
     std::ifstream file;
     file.open(k);
@@ -27,19 +34,24 @@ void Sorting(size_t quantity, std::string k, std::string w)
     for (size_t i = 0; i < quantity; i++)
     {
         s.push_back(Student());
-        file >> s[i].name >> s[i].surname;
+        file >> name >> surname;
+        s[i].namei(name);
+        s[i].surnamei(surname);
         vidurkis = 0;
         for(size_t j = 0; j < 5; j++)
         {
             file >> grade;
-            s[i].Hgrade.push_back(grade);
-            vidurkis += s[i].Hgrade[j];
+            s[i].Hgradei(grade);
+            vidurkis += grade;
         }
 
-        s[i].type = vidurkis / 5.0 >= 6.0 ? "Winner" : "Loser";
-        file >> s[i].Egrade;
+        type = vidurkis / 5.0 >= 6.0 ? "Winner" : "Loser";
+        s[i].typei(type);
+        file >> grade2;
+        s[i].Egradei(grade2);
     }
     std::sort(s.begin(), s.end(), compareByType);
+
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
     duration<double, std::milli> time_span = t2 - t1;
     std::cout << k << " " << time_span.count()/1000 << " seconds" << std::endl;
@@ -48,13 +60,14 @@ void Sorting(size_t quantity, std::string k, std::string w)
     input.open(w);
     for(size_t i = 0; i < quantity; i++)
     {
-        input << s[i].name << " " << s[i].surname << " ";
+        //Student s;
+        input << s[i].nameo() << " " << s[i].surnameo() << " ";
         for(size_t j = 0; j < 5; j++)
         {
-            input << s[i].Hgrade[j] << " ";
+            input << s[i].Hgradeo(j) << " ";
         }
-        input << s[i].Egrade << " ";
-        input << s[i].type << std::endl;
+        input << s[i].Egradeo() << " ";
+        input << s[i].typeo() << std::endl;
     }
     input.close();
 }

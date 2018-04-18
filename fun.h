@@ -18,5 +18,6 @@ int  Check(int a, int b);
 int  GradeCheck();
 void PerformanceCheck();
 void ContainerPerformanceCheck(int option);
+void print();
 
 #endif

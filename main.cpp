@@ -1,7 +1,7 @@
 
 #include "fun.h"
-#include "sorting.h"
-#include "functions.h"
+//#include "sorting.h"
+//#include "functions.h"
 int main()
 {
     int homeworkquantity = 5;

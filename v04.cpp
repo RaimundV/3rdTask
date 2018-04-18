@@ -1,12 +1,18 @@
 #include "sorting.h"
 
 //#include "struct.h"
-#include "struct.h"
 
 void Random(size_t quantity, std::string k)
 {
-    using namespace std::chrono;
+    int grade;
+    std::string name;
+    std::string surname;
+    std::string type;
+    int grade2;
+
     std::vector<Student> s;
+
+    using namespace std::chrono;
     std::random_device rseed;
     std::mt19937 rgen(rseed()/1000*static_cast<long unsigned int>(std::chrono::high_resolution_clock::now().
     time_since_epoch().count())); // mersenne_twister
@@ -17,21 +23,27 @@ void Random(size_t quantity, std::string k)
     for (size_t i = 0; i < quantity; i++)
     {
         s.push_back(Student());
-        s[i].name = "vard";
-        s[i].surname = "pav";
+
+        name    = "vard";
+        surname = "pav";
+
         std::ostringstream convert;
         convert << i;
-        s[i].name    += convert.str();
-        s[i].surname += convert.str();
+        name    += convert.str();
+        surname += convert.str();
+
+        s[i].namei(name);
+        s[i].surnamei(surname);
+
         vidurkis = 0;
         for(size_t j = 0; j < 5; j++)
         {
-            s[i].Hgrade.push_back(idist(rgen));
-            vidurkis += s[i].Hgrade[j];
+            s[i].Hgradei(idist(rgen));
+            vidurkis += s[i].Hgradeo(j);
         }
 
         //s[i].type = vidurkis / 5.0 >= 6.0 ? "Winner" : "Loser";
-        s[i].Egrade = idist(rgen);
+        s[i].Egradei(idist(rgen));
     }
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
     duration<double, std::milli> time_span = t2 - t1;
@@ -39,12 +51,12 @@ void Random(size_t quantity, std::string k)
     file.open(k);
     for(size_t i = 0; i < quantity; i++)
     {
-        file << s[i].name << " " << s[i].surname << " ";
+        file << s[i].nameo() << " " << s[i].surnameo() << " ";
         for(size_t j = 0; j < 5; j++)
         {
-            file << s[i].Hgrade[j] << " ";
+            file << s[i].Hgradeo(j) << " ";
         }
-        file << s[i].Egrade << std::endl;
+        file << s[i].Egradeo() << std::endl;
     }
     file.close();
 }

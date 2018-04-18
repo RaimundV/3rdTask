@@ -2,9 +2,7 @@
 // Created by 123 on 2018-03-31.
 //
 
-#include "sorting.h"
-#include "functionsL.h"
-#include "functionsD.h"
+
 #include "functions.h"
 
 void ContainerPerformanceCheck(int option)

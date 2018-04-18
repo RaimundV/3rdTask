@@ -4,12 +4,16 @@
     return a.type < b.type;
 }*/
 #include "sorting.h"
-#include "struct.h"
+//#include "struct.h"
 
 void SortingL(size_t quantity, std::string k, std::string w)
 {
     std::list<Student> st;
     Student s;
+    std::string name;
+    std::string surname;
+    std::string type;
+    int grade2;
     int grade;
     using namespace std::chrono;
     std::ifstream file;
@@ -28,18 +32,22 @@ void SortingL(size_t quantity, std::string k, std::string w)
     high_resolution_clock::time_point t1 = high_resolution_clock::now();
     for (size_t i = 0; i < quantity; i++)
     {
-        file >> s.name >> s.surname;
+        file >> name >> surname;
+        s.namei(name);
+        s.surnamei(surname);
         vidurkis = 0;
         for(size_t j = 0; j < 5; j++)
         {
             file >> grade;
-            s.Hgrade.push_back(grade);
-            vidurkis += s.Hgrade[j];
+            s.Hgradei(grade);
+            vidurkis += grade;
             //std::cout << s.Hgrade[j] << std::endl;
         }
 
-        s.type = vidurkis / 5.0 >= 6.0 ? "Winner" : "Loser";
-        file >> s.Egrade;
+        type = vidurkis / 5.0 >= 6.0 ? "Winner" : "Loser";
+        file >> grade2;
+        s.typei(type);
+        s.Egradei(grade2);
         st.push_back(s);
         s = {};
     }
@@ -53,16 +61,16 @@ void SortingL(size_t quantity, std::string k, std::string w)
     for(std::list<Student>::iterator it = st.begin(); it !=st.end(); ++it)
     {
         std::string n, s;
-        n = (it)->name;
-        s = (it)->surname;
+        n = (it)->nameo();
+        s = (it)->surnameo();
             input << n << " " << s << " ";
             for(size_t j = 0; j < 5; j++)
             {
-                int grade = (it)->Hgrade[j];
+                int grade = (it)->Hgradeo(j);
                 input << grade << " ";
             }
-            int e = (it)->Egrade;
-            std::string word = (it)->type;
+            int e = (it)->Egradeo();
+            std::string word = (it)->typeo();
 
             input << e << " ";
             input << word << std::endl;

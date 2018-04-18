@@ -15,9 +15,50 @@
 #include <sstream>
 #include <algorithm>
 #include <iterator>
+#include <list>
+#include <deque>
+
+class Student
+{
+private:
+    std::string name;
+    std::string surname;
+    std::vector<int> Hgrade;
+    int Egrade;
+    std::string type;
+public:
+    //Student () : Egrade(0) {};
+    std::string typeo()        const { return type; };
+    //Student(/*std::istream& is*/) {};
+    std::string nameo()        const { return name; };
+    std::string surnameo()     const { return surname; };
+    int Hgradeo(int i)         const { return Hgrade[i]; };
+    int Egradeo()              const { return Egrade; };
+
+    void namei(std::string& sname)       { name = sname; };
+    void surnamei(std::string& ssurname) { surname = ssurname; };
+    void Hgradei(int g)                  { Hgrade.push_back(g); };
+    void Egradei(int g)                  { Egrade = g; };
+    void typei(std::string& stype)       { type = stype; };
+    /*friend bool operator==(const Student& lhs, const Student& rhs)
+    {
+        return lhs.name == rhs.name && lhs.type == rhs.type;
+    }*/
+};
+
 
 void ContainerV(size_t quantity, std::string k, std::string w);
 void ContainerV2(size_t quantity, std::string k, std::string w);
 void ContainerV2Unoptimized(size_t quantity, std::string k, std::string w);
+
+void ContainerD(size_t quantity, std::string k, std::string w);
+void ContainerD2(size_t quantity, std::string k, std::string w);
+void ContainerD2Unoptimized(size_t quantity, std::string k, std::string w);
+
+void ContainerL(size_t quantity, std::string k, std::string w);
+void ContainerL2(size_t quantity, std::string k, std::string w);
+void ContainerL2Unoptimized(size_t quantity, std::string k, std::string w);
+
+bool IsWinner(const Student& s);
 
 #endif //DARBAS2_FUNCTIONS_H

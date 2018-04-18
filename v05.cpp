@@ -1,5 +1,5 @@
 #include "sorting.h"
-#include "functions.h"
+//#include "functions.h"
 void PerformanceCheck()
 {
     std::cout << "\nSorting with vector:\n" << std::endl;
