@@ -51,7 +51,6 @@ void Sorting(size_t quantity, std::string k, std::string w)
         s[i].Egradei(grade2);
     }
     std::sort(s.begin(), s.end(), compareByType);
-
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
     duration<double, std::milli> time_span = t2 - t1;
     std::cout << k << " " << time_span.count()/1000 << " seconds" << std::endl;
@@ -70,4 +69,6 @@ void Sorting(size_t quantity, std::string k, std::string w)
         input << s[i].typeo() << std::endl;
     }
     input.close();
+
+
 }

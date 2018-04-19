@@ -28,12 +28,12 @@ private:
     std::string type;
 public:
     //Student () : Egrade(0) {};
-    std::string typeo()        const { return type; };
+    inline std::string typeo()        const { return type; };
     //Student(/*std::istream& is*/) {};
-    std::string nameo()        const { return name; };
-    std::string surnameo()     const { return surname; };
-    int Hgradeo(int i)         const { return Hgrade[i]; };
-    int Egradeo()              const { return Egrade; };
+    inline std::string nameo()        const { return name; };
+    inline std::string surnameo()     const { return surname; };
+    inline int Hgradeo(int i)         const { return Hgrade[i]; };
+    inline int Egradeo()              const { return Egrade; };
 
     void namei(std::string& sname)       { name = sname; };
     void surnamei(std::string& ssurname) { surname = ssurname; };

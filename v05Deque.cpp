@@ -68,4 +68,6 @@ void SortingD(size_t quantity, std::string k, std::string w)
         input << s[i].typeo() << std::endl;
     }
     input.close();
+
+
 }

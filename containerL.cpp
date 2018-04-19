@@ -63,7 +63,9 @@ void ContainerL(size_t quantity, std::string k, std::string w)
         }
     }
 
-
+    high_resolution_clock::time_point t2 = high_resolution_clock::now();
+    duration<double, std::milli> time_span = t2 - t1;
+    std::cout << k << " " << time_span.count()/1000 << " seconds" << std::endl;
     file.close();
     std::ofstream input;
     input.open(w);
@@ -103,9 +105,7 @@ void ContainerL(size_t quantity, std::string k, std::string w)
         input << word << std::endl;
     }
     input.close();
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    duration<double, std::milli> time_span = t2 - t1;
-    std::cout << k << " " << time_span.count()/1000 << " seconds" << std::endl;
+
 }
 
 void ContainerL2(size_t quantity, std::string k, std::string w)
@@ -163,7 +163,9 @@ void ContainerL2(size_t quantity, std::string k, std::string w)
         }
     }
     st.erase( std::remove_if(st.begin(), st.end(), IsWinner), st.end() );
-
+    high_resolution_clock::time_point t2 = high_resolution_clock::now();
+    duration<double, std::milli> time_span = t2 - t1;
+    std::cout << k << " " << time_span.count()/1000 << " seconds" << std::endl;
     file.close();
     std::ofstream input;
     input.open(w);
@@ -203,9 +205,7 @@ void ContainerL2(size_t quantity, std::string k, std::string w)
         input << word << std::endl;
     }
     input.close();
-    high_resolution_clock::time_point t2 = high_resolution_clock::now();
-    duration<double, std::milli> time_span = t2 - t1;
-    std::cout << k << " " << time_span.count()/1000 << " seconds" << std::endl;
+
 }
 
 void ContainerL2Unoptimized(size_t quantity, std::string k, std::string w)
@@ -308,4 +308,5 @@ void ContainerL2Unoptimized(size_t quantity, std::string k, std::string w)
         input << word << std::endl;
     }
     input.close();
+
 }

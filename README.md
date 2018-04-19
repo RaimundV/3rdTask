@@ -62,6 +62,17 @@ Enter option:
 | 3 | 0.0040037 | 0.0080052 | 0.0050046
 | 4 | 0.0090048 | 0.11308 | 0.056544
 | 5 | 0.952  | 1.1048 | 0.52141
+
+Using class and flags:
+
+| Nr. | Vector | Deque | List
+| :---: | :---: | :---: | :---:
+| 1 | 0.0009987 | 0 | 0
+| 2 | 0.0009983 | 0.0020032 | 0.0010005
+| 3 | 0.0050016 | 0.0050033 | 0.0019997
+| 4 | 0.052035 | 0.0530359 | 0.030023
+| 5 | 0.548388  | 0.453339 | 0.336241
+
 #### 5. Check container performance(uses more containers to sort the students)
 1. Gets student information from files that were generated in step 3.
 1. Checks performance when inserting the students to different containers by their types (**winners** or **losers**) 
@@ -80,6 +91,14 @@ done by different containers: vector, list, deque.
 | 4 | 0.04956 | 0.057081 | 0.040046
 | 5 | 0.43744 | 0.55343 | 0.45344
 
+| Nr. | Vector | Deque | List
+| :---: | :---: | :---: | :---:
+| 1 | 0 | 0 | 0
+| 2 | 0.0010004 | 0.001 | 0.0010032
+| 3 | 0.0040015 | 0.0040028 | 0.0020023
+| 4 | 0.0410261 | 0.0240179 | 0.0220142
+| 5 | 0.335234 | 0.251181 | 0.230163
+
 ##### Strategy Nr. 2:
 
 | Nr. | Vector | Deque | List
@@ -89,6 +108,14 @@ done by different containers: vector, list, deque.
 | 3 | 0.0050029 | 0.011007 | 0.004002
 | 4 | 0.05104 | 0.06855 | 0.040134
 | 5 | 0.58645 | 0.64356 | 0.514
+
+| Nr. | Vector | Deque | List
+| :---: | :---: | :---: | :---:
+| 1 | 0 | 0 | 0
+| 2 | 0.0010014 | 0 | 0
+| 3 | 0.0040024 | 0.0020192 | 0.0040024
+| 4 | 0.0250157 | 0.019995 | 0.0240148
+| 5 | 0.394278 | 0.212147 | 0.295227
 
 #### 6. Check container performance without arguments
 1. Gets student information from files that were generated in step 3.

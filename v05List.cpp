@@ -76,4 +76,6 @@ void SortingL(size_t quantity, std::string k, std::string w)
             input << word << std::endl;
     }
     input.close();
+
+
 }

@@ -87,6 +87,7 @@ void ContainerD(size_t quantity, std::string k, std::string w)
         input << winner[i].typeo() << std::endl;
     }
     input.close();
+
 }
 
 
@@ -172,6 +173,7 @@ void ContainerD2(size_t quantity, std::string k, std::string w)
         input << winner[i].typeo() << std::endl;
     }
     input.close();
+
 }
 
 
@@ -260,6 +262,7 @@ void ContainerD2Unoptimized(size_t quantity, std::string k, std::string w)
         input << winner[i].typeo() << std::endl;
     }
     input.close();
+
 }
 
 
