@@ -14,6 +14,9 @@
 #include <deque>
 #include <iterator>
 
+/**
+ * class that stores student information
+ */
 
 class Student
 {
@@ -37,10 +40,30 @@ public:
     void Hgradei(int g)                 { Hgrade.push_back(g); };
     void Egradei(int g)                 { Egrade = g; };
     void typei(std::string& stype)       { type = stype; };
-    std::istream& readStudent(std::istream&);
 
+    friend std::ostream &operator<<( std::ostream &output, const Student &S )
+    {
+        output << S.name << " " << S.surname << " ";
+        for (size_t i = 0; i < 5; i ++)
+        {
+            output << S.Hgrade[i] << " ";
+        }
+        output << S.Egrade << " " << S.type;
+        return output;
+    }
 
-
+    bool operator<(Student b)
+    {
+        return typeo() < b.typeo();
+    }
+    bool operator>(Student b)
+    {
+        return typeo() > b.typeo();
+    }
+    bool operator==(Student b)
+    {
+        return typeo() == b.typeo();
+    }
     /*friend bool operator==(const Student& lhs, const Student& rhs)
     {
         return lhs.name == rhs.name && lhs.type == rhs.type;
@@ -48,7 +71,6 @@ public:
 };
 
 bool IsWinner(const Student& s);
-bool compareByType(const Student &a, const Student &b);
 void Sorting(size_t quantity, std::string k, std::string w);
 void SortingD(size_t quantity, std::string k, std::string w);
 void SortingL(size_t quantity, std::string k, std::string w);

@@ -1,5 +1,12 @@
 #include "fun.h"
-#include "functions.h"
+//#include "functions.h"
+
+/**
+ * Checks is users input is an integer
+ * @param a
+ * @param b
+ * @return
+ */
 
 int Check(int a, int b)
 {

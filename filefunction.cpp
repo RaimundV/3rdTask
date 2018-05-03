@@ -1,5 +1,5 @@
 #include "fun.h"
-#include "functions.h"
+//#include "functions.h"
 
 struct Grades
 {

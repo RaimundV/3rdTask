@@ -1,5 +1,8 @@
 #include "sorting.h"
 //#include "functions.h"
+/**
+ * Function used to call out Sorting SortingD and SortingL functions
+ */
 void PerformanceCheck()
 {
     std::cout << "\nSorting with vector:\n" << std::endl;

@@ -3,6 +3,13 @@
 //
 #include "functions.h"
 
+/**
+ * Used for checking performance when pushing students to 2 diffeent contianers losers and winners
+ * @param quantity
+ * @param k
+ * @param w
+ */
+
 void ContainerD(size_t quantity, std::string k, std::string w)
 {
     std::string name;
@@ -90,7 +97,12 @@ void ContainerD(size_t quantity, std::string k, std::string w)
 
 }
 
-
+/**
+ * Used for checking performance when pushing winners to another container and erasing them from the main container
+ * @param quantity
+ * @param k
+ * @param w
+ */
 
 void ContainerD2(size_t quantity, std::string k, std::string w)
 {
@@ -176,6 +188,13 @@ void ContainerD2(size_t quantity, std::string k, std::string w)
 
 }
 
+/**
+ * Used for checking performance when pushing winners to another container and erasing them from the main container, but without using
+ * algorithms
+ * @param quantity
+ * @param k
+ * @param w
+ */
 
 void ContainerD2Unoptimized(size_t quantity, std::string k, std::string w)
 {

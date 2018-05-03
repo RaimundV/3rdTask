@@ -4,10 +4,23 @@
 #include "functions.h"
 //#include "struct.h"
 
+/**
+ * Used for erase and remove_if
+ * @param s
+ * @return
+ */
+
 bool IsWinner(const Student& s)
 {
     return s.typeo() == "Winner";
 }
+
+/**
+ * Used for checking performance when pushing students to 2 diffeent contianers losers and winners
+ * @param quantity
+ * @param k
+ * @param w
+ */
 
 void ContainerV(size_t quantity, std::string k, std::string w)
 {
@@ -96,7 +109,12 @@ void ContainerV(size_t quantity, std::string k, std::string w)
 
 }
 
-
+/**
+ * Used for checking performance when pushing winners to another container and erasing them from the main container
+ * @param quantity
+ * @param k
+ * @param w
+ */
 
 void ContainerV2(size_t quantity, std::string k, std::string w)
 {
@@ -180,6 +198,15 @@ void ContainerV2(size_t quantity, std::string k, std::string w)
     input.close();
 
 }
+
+
+/**
+ * Used for checking performance when pushing winners to another container and erasing them from the main container, but without using
+ * algorithms
+ * @param quantity
+ * @param k
+ * @param w
+ */
 
 void ContainerV2Unoptimized(size_t quantity, std::string k, std::string w)
 {

@@ -1,15 +1,13 @@
 #include "sorting.h"
 //#include "struct.h"
-bool compareByType(const Student &a, const Student &b)
-{
-    return a.typeo() < b.typeo();
-}
-
+/**
+ * Function used to sort students with vector container
+ * @param quantity
+ * @param k
+ * @param w
+ */
 void Sorting(size_t quantity, std::string k, std::string w)
 {
-    //Student::Student();
-
-
     int grade;
     std::string name;
     std::string surname;
@@ -50,7 +48,7 @@ void Sorting(size_t quantity, std::string k, std::string w)
         file >> grade2;
         s[i].Egradei(grade2);
     }
-    std::sort(s.begin(), s.end(), compareByType);
+    std::sort(s.begin(), s.end());
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
     duration<double, std::milli> time_span = t2 - t1;
     std::cout << k << " " << time_span.count()/1000 << " seconds" << std::endl;
@@ -59,16 +57,7 @@ void Sorting(size_t quantity, std::string k, std::string w)
     input.open(w);
     for(size_t i = 0; i < quantity; i++)
     {
-        //Student s;
-        input << s[i].nameo() << " " << s[i].surnameo() << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            input << s[i].Hgradeo(j) << " ";
-        }
-        input << s[i].Egradeo() << " ";
-        input << s[i].typeo() << std::endl;
+        input << s[i] << std::endl;
     }
     input.close();
-
-
 }

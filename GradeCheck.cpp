@@ -1,5 +1,10 @@
 #include "fun.h"
-#include "functions.h"
+//#include "functions.h"
+
+/**
+ * Checks if users' input is an integer from 0 to 10
+ * @return
+ */
 
 int GradeCheck()
 {

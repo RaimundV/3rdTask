@@ -5,7 +5,12 @@
 }*/
 #include "sorting.h"
 //#include "struct.h"
-
+/**
+ * @param quantity
+ * @param k
+ * @param w
+ * Function used to sort students with list container
+ */
 void SortingL(size_t quantity, std::string k, std::string w)
 {
     std::list<Student> st;
@@ -51,7 +56,7 @@ void SortingL(size_t quantity, std::string k, std::string w)
         st.push_back(s);
         s = {};
     }
-    st.sort(compareByType);
+    st.sort();
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
     duration<double, std::milli> time_span = t2 - t1;
     std::cout << k << " " << time_span.count()/1000 << " seconds" << std::endl;

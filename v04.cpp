@@ -1,7 +1,12 @@
 #include "sorting.h"
 
 //#include "struct.h"
-
+/**
+ *
+ * @param quantity
+ * @param k
+ * Function used to generate random students
+ */
 void Random(size_t quantity, std::string k)
 {
     int grade;
@@ -61,7 +66,9 @@ void Random(size_t quantity, std::string k)
     file.close();
 }
 
-
+/**
+ * Function used to call out Random function and count the time
+ */
 void print()
 {
     using namespace std::chrono;

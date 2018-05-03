@@ -18,6 +18,10 @@
 #include <list>
 #include <deque>
 
+/**
+ * class that stores student information
+ */
+
 class Student
 {
 private:
@@ -27,9 +31,7 @@ private:
     int Egrade;
     std::string type;
 public:
-    //Student () : Egrade(0) {};
     inline std::string typeo()        const { return type; };
-    //Student(/*std::istream& is*/) {};
     inline std::string nameo()        const { return name; };
     inline std::string surnameo()     const { return surname; };
     inline int Hgradeo(int i)         const { return Hgrade[i]; };
@@ -40,12 +42,31 @@ public:
     void Hgradei(int g)                  { Hgrade.push_back(g); };
     void Egradei(int g)                  { Egrade = g; };
     void typei(std::string& stype)       { type = stype; };
-    /*friend bool operator==(const Student& lhs, const Student& rhs)
-    {
-        return lhs.name == rhs.name && lhs.type == rhs.type;
-    }*/
-};
 
+    friend std::ostream &operator<<( std::ostream &output, const Student &S )
+    {
+        output << S.name << " " << S.surname << " ";
+        for (size_t i = 0; i < 5; i ++)
+        {
+            output << S.Hgrade[i] << " ";
+        }
+        output << S.Egrade << " " << S.type;
+        return output;
+    }
+
+    bool operator<(Student b)
+    {
+        return typeo() < b.typeo();
+    }
+    bool operator>(Student b)
+    {
+        return typeo() > b.typeo();
+    }
+    bool operator==(Student b)
+    {
+        return typeo() == b.typeo();
+    }
+};
 
 void ContainerV(size_t quantity, std::string k, std::string w);
 void ContainerV2(size_t quantity, std::string k, std::string w);
