@@ -12,7 +12,7 @@
 
 void ContainerL(size_t quantity, std::string k, std::string w)
 {
-    std::list<Student> st;
+   /* std::list<Student> st;
     std::list<Student> winner;
     std::list<Student> loser;
     Student s;
@@ -112,7 +112,7 @@ void ContainerL(size_t quantity, std::string k, std::string w)
         input << word << std::endl;
     }
     input.close();
-
+*/
 }
 
 /**
@@ -123,7 +123,7 @@ void ContainerL(size_t quantity, std::string k, std::string w)
  */
 
 void ContainerL2(size_t quantity, std::string k, std::string w)
-{
+{/*
     std::list<Student> st;
     std::list<Student> winner;
     Student s;
@@ -218,7 +218,7 @@ void ContainerL2(size_t quantity, std::string k, std::string w)
         input << e << " ";
         input << word << std::endl;
     }
-    input.close();
+    input.close();*/
 
 }
 
@@ -232,7 +232,7 @@ void ContainerL2(size_t quantity, std::string k, std::string w)
 
 void ContainerL2Unoptimized(size_t quantity, std::string k, std::string w)
 {
-    std::list<Student> st;
+    /*std::list<Student> st;
     std::list<Student> winner;
     Student s;
 
@@ -330,5 +330,5 @@ void ContainerL2Unoptimized(size_t quantity, std::string k, std::string w)
         input << word << std::endl;
     }
     input.close();
-
+*/
 }

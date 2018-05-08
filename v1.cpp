@@ -32,7 +32,7 @@ void ContainerPerformanceCheck(int option)
 
         ContainerV2(100000, "wow5.txt", "Container2V5.txt");
 
-        std::cout << "\nDeque Container PCheck 1:\n" << std::endl;
+       /* std::cout << "\nDeque Container PCheck 1:\n" << std::endl;
 
         ContainerD(10, "wow1.txt", "ContainerD1.txt");
 
@@ -78,11 +78,11 @@ void ContainerPerformanceCheck(int option)
 
         ContainerL2(10000, "wow4.txt", "Container2L4.txt");
 
-        ContainerL2(100000, "wow5.txt", "Container2L5.txt");
+        ContainerL2(100000, "wow5.txt", "Container2L5.txt");*/
     }
     else
     {
-        std::cout << "\nVector Container PCheck 2 without algorithms:\n" << std::endl;
+       /* std::cout << "\nVector Container PCheck 2 without algorithms:\n" << std::endl;
         ContainerV2Unoptimized(10, "wow1.txt", "Container2V1nb.txt");
         ContainerV2Unoptimized(100, "wow2.txt", "Container2V2nb.txt");
         ContainerV2Unoptimized(1000, "wow3.txt", "Container2V3nb.txt");
@@ -101,7 +101,7 @@ void ContainerPerformanceCheck(int option)
         ContainerL2Unoptimized(100, "wow2.txt", "Container2L2nb.txt");
         ContainerL2Unoptimized(1000, "wow3.txt", "Container2L3nb.txt");
         ContainerL2Unoptimized(10000, "wow4.txt", "Container2L4nb.txt");
-        //ContainerL2Unoptimized(100000, "wow5.txt", "Container2L5nb.txt");
+        //ContainerL2Unoptimized(100000, "wow5.txt", "Container2L5nb.txt");*/
     }
 }
 

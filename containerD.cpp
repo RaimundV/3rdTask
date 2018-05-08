@@ -11,7 +11,7 @@
  */
 
 void ContainerD(size_t quantity, std::string k, std::string w)
-{
+{/*
     std::string name;
     std::string surname;
     std::string type;
@@ -93,7 +93,7 @@ void ContainerD(size_t quantity, std::string k, std::string w)
         input << winner[i].Egradeo() << " ";
         input << winner[i].typeo() << std::endl;
     }
-    input.close();
+    input.close();*/
 
 }
 
@@ -106,7 +106,7 @@ void ContainerD(size_t quantity, std::string k, std::string w)
 
 void ContainerD2(size_t quantity, std::string k, std::string w)
 {
-    std::string name;
+   /* std::string name;
     std::string surname;
     std::string type;
     int grade2;
@@ -185,7 +185,7 @@ void ContainerD2(size_t quantity, std::string k, std::string w)
         input << winner[i].typeo() << std::endl;
     }
     input.close();
-
+*/
 }
 
 /**
@@ -197,7 +197,7 @@ void ContainerD2(size_t quantity, std::string k, std::string w)
  */
 
 void ContainerD2Unoptimized(size_t quantity, std::string k, std::string w)
-{
+{/*
     std::string name;
     std::string surname;
     std::string type;
@@ -281,7 +281,7 @@ void ContainerD2Unoptimized(size_t quantity, std::string k, std::string w)
         input << winner[i].typeo() << std::endl;
     }
     input.close();
-
+*/
 }
 
 

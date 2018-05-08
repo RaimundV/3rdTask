@@ -17,6 +17,7 @@
 #include <iterator>
 #include <list>
 #include <deque>
+#include <vector>
 
 /**
  * class that stores student information
@@ -31,6 +32,15 @@ private:
     int Egrade;
     std::string type;
 public:
+    Student () : name(""), surname(""), Hgrade(0), Egrade(0), type("") {};
+    Student (std::vector<Student>::iterator it , std::vector<Student>::iterator it2 ) {
+        for(std::vector<Student>::iterator iter = it; iter != it2; iter++)
+        {
+            Student tmp = *iter;
+            *this = tmp;
+        }
+    };
+
     inline std::string typeo()        const { return type; };
     inline std::string nameo()        const { return name; };
     inline std::string surnameo()     const { return surname; };
