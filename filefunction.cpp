@@ -1,6 +1,13 @@
 #include "fun.h"
 //#include "functions.h"
-
+/**
+ * @param Surname
+ * @param Name
+ * @param homework
+ * @param exam
+ * @param AVGmedian
+ * @param AVGaverage
+ */
 struct Grades
 {
     std::string Surname;
@@ -9,7 +16,12 @@ struct Grades
     double exam;
     double AVGmedian;
     double AVGaverage;
-    //std::string Type;
+    /**
+     * used to sort students by their surname
+     * @param lhs
+     * @param rhs
+     * @return
+     */
     bool operator()(const Grades& lhs, const Grades& rhs) const { lhs.Surname < rhs.Surname; };
 };
 

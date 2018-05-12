@@ -1,11 +1,5 @@
 
 #include "fun.h"
-//#include "sorting.h"
-//#include "functions.h"
-/**
- * function that calls out other functions based on the users' wishes
- * @return
- */
 int main()
 {
     int homeworkquantity = 5;

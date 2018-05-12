@@ -1,14 +1,5 @@
 #include "sorting.h"
 
-//#include "struct.h"
-
-
-/**
- * Function used to sort students with deque container
- * @param quantity
- * @param k
- * @param w
- */
 void SortingD(size_t quantity, std::string k, std::string w)
 {
     int grade;
@@ -64,6 +55,4 @@ void SortingD(size_t quantity, std::string k, std::string w)
         input << s[i] << std::endl;
     }
     input.close();
-
-
 }

@@ -4,23 +4,10 @@
 #include "functions.h"
 //#include "struct.h"
 
-/**
- * Used for erase and remove_if
- * @param s
- * @return
- */
-
 bool IsWinner(const Student& s)
 {
     return s.typeo() == "Winner";
 }
-
-/**
- * Used for checking performance when pushing students to 2 diffeent contianers losers and winners
- * @param quantity
- * @param k
- * @param w
- */
 
 void ContainerV(size_t quantity, std::string k, std::string w)
 {
@@ -31,7 +18,6 @@ void ContainerV(size_t quantity, std::string k, std::string w)
     int grade;
 
     std::vector<Student> s;
-    std::vector<Student> work();
     using namespace std::chrono;
     std::ifstream file;
     file.open(k);
@@ -45,7 +31,6 @@ void ContainerV(size_t quantity, std::string k, std::string w)
         std::cout<< "File " << k << " No such file exists" << std::endl;
         return;
     }
-    //Student what;
     double vidurkis;
     high_resolution_clock::time_point t1 = high_resolution_clock::now();
     for (size_t i = 0; i < quantity; i++)
@@ -67,19 +52,8 @@ void ContainerV(size_t quantity, std::string k, std::string w)
         file >> grade2;
         s[i].Egradei(grade2);
     }
-    /*for (size_t i = 0; i < quantity; i++)
-    {
-        if(s[i].typeo() == "Winner")
-        {
-            winner.push_back(s[i]);
-        }
-        else
-        {
-            loser.push_back(s[i]);
-        }
-    }*/
-        std::vector<Student>::iterator bound;
-        bound = std::partition(s.begin(), s.end(), IsWinner);
+    std::vector<Student>::iterator bound;
+    bound = std::partition(s.begin(), s.end(), IsWinner);
     std::vector<Student> winner(s.begin(), bound);
     std::vector<Student> loser(bound, s.end());
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
@@ -88,38 +62,17 @@ void ContainerV(size_t quantity, std::string k, std::string w)
     file.close();
     std::ofstream input;
     input.open(w);
-    for(size_t i = 0; i < loser.size(); i++)
+    for(auto i = 0; i < loser.size(); i++)
     {
-        /*input << loser[i].nameo() << " " << loser[i].surnameo() << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            input << loser[i].Hgradeo(j) << " ";
-        }
-        input << loser[i].Egradeo() << " ";
-        input << loser[i].typeo() << std::endl;*/
         input << loser[i] << std:: endl;
     }
-    for(size_t i = 0; i < winner.size(); i++)
+    for(auto i = 0; i < winner.size(); i++)
     {
-        /*input << winner[i].nameo() << " " << winner[i].surnameo() << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            input << winner[i].Hgradeo(j) << " ";
-        }
-        input << winner[i].Egradeo() << " ";
-        input << winner[i].typeo() << std::endl;*/
         input << winner[i] << std::endl;
     }
     input.close();
 
 }
-
-/**
- * Used for checking performance when pushing winners to another container and erasing them from the main container
- * @param quantity
- * @param k
- * @param w
- */
 
 void ContainerV2(size_t quantity, std::string k, std::string w)
 {
@@ -164,14 +117,6 @@ void ContainerV2(size_t quantity, std::string k, std::string w)
         file >> grade2;
         s[i].Egradei(grade2);
     }
-    /*for (size_t i = 0; i < quantity; i++)
-    {
-        if(s[i].typeo() == "Winner")
-        {
-            winner.push_back(s[i]);
-
-        }
-    }*/
     std::vector<Student>::iterator bound;
     bound = std::partition(s.begin(), s.end(), IsWinner);
     std::vector<Student> winner(s.begin(), bound);
@@ -182,26 +127,17 @@ void ContainerV2(size_t quantity, std::string k, std::string w)
     file.close();
     std::ofstream input;
     input.open(w);
-    for(size_t i = 0; i < s.size(); i++)
+    for(auto i = 0; i < s.size(); i++)
     {
         input << s[i] << std::endl;
     }
-    for(size_t i = 0; i < winner.size(); i++)
+    for(auto i = 0; i < winner.size(); i++)
     {
         input << winner[i] << std::endl;
     }
     input.close();
 
 }
-
-
-/**
- * Used for checking performance when pushing winners to another container and erasing them from the main container, but without using
- * algorithms
- * @param quantity
- * @param k
- * @param w
- */
 
 void ContainerV2Unoptimized(size_t quantity, std::string k, std::string w)
 {
@@ -268,7 +204,7 @@ void ContainerV2Unoptimized(size_t quantity, std::string k, std::string w)
     file.close();
     std::ofstream input;
     input.open(w);
-    for(size_t i = 0; i < s.size(); i++)
+    for(auto i = 0; i < s.size(); i++)
     {
         input << s[i].nameo() << " " << s[i].surnameo() << " ";
         for(size_t j = 0; j < 5; j++)
@@ -278,7 +214,7 @@ void ContainerV2Unoptimized(size_t quantity, std::string k, std::string w)
         input << s[i].Egradeo() << " ";
         input << s[i].typeo() << std::endl;
     }
-    for(size_t i = 0; i < winner.size(); i++)
+    for(auto i = 0; i < winner.size(); i++)
     {
         input << winner[i].nameo() << " " << winner[i].surnameo() << " ";
         for(size_t j = 0; j < 5; j++)

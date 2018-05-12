@@ -1,16 +1,4 @@
-
-/*bool compareByType(const Student &a, const Student &b)
-{
-    return a.type < b.type;
-}*/
 #include "sorting.h"
-//#include "struct.h"
-/**
- * @param quantity
- * @param k
- * @param w
- * Function used to sort students with list container
- */
 void SortingL(size_t quantity, std::string k, std::string w)
 {
     std::list<Student> st;
@@ -81,6 +69,4 @@ void SortingL(size_t quantity, std::string k, std::string w)
             input << word << std::endl;
     }
     input.close();
-
-
 }

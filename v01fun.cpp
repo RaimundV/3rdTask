@@ -1,4 +1,3 @@
-//#include "functions.h"
 #include "fun.h"
 
 void fun2(double proc1, double proc2)

@@ -1,12 +1,5 @@
 #include "sorting.h"
 
-//#include "struct.h"
-/**
- *
- * @param quantity
- * @param k
- * Function used to generate random students
- */
 void Random(size_t quantity, std::string k)
 {
     int grade;
@@ -47,7 +40,6 @@ void Random(size_t quantity, std::string k)
             vidurkis += s[i].Hgradeo(j);
         }
 
-        //s[i].type = vidurkis / 5.0 >= 6.0 ? "Winner" : "Loser";
         s[i].Egradei(idist(rgen));
     }
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
@@ -66,9 +58,6 @@ void Random(size_t quantity, std::string k)
     file.close();
 }
 
-/**
- * Function used to call out Random function and count the time
- */
 void print()
 {
     using namespace std::chrono;

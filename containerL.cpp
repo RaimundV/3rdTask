@@ -3,16 +3,9 @@
 //
 #include "functions.h"
 
-/**
- * Used for checking performance when pushing students to 2 diffeent contianers losers and winners
- * @param quantity
- * @param k
- * @param w
- */
-
 void ContainerL(size_t quantity, std::string k, std::string w)
 {
-   /* std::list<Student> st;
+    std::list<Student> st;
     std::list<Student> winner;
     std::list<Student> loser;
     Student s;
@@ -112,18 +105,11 @@ void ContainerL(size_t quantity, std::string k, std::string w)
         input << word << std::endl;
     }
     input.close();
-*/
+
 }
 
-/**
- * Used for checking performance when pushing winners to another container and erasing them from the main container
- * @param quantity
- * @param k
- * @param w
- */
-
 void ContainerL2(size_t quantity, std::string k, std::string w)
-{/*
+{
     std::list<Student> st;
     std::list<Student> winner;
     Student s;
@@ -158,7 +144,6 @@ void ContainerL2(size_t quantity, std::string k, std::string w)
             file >> grade;
             s.Hgradei(grade);
             vidurkis += grade;
-            //std::cout << s.Hgrade[j] << std::endl;
         }
 
         type = vidurkis / 5.0 >= 6.0 ? "Winner" : "Loser";
@@ -185,54 +170,23 @@ void ContainerL2(size_t quantity, std::string k, std::string w)
     input.open(w);
     for(std::list<Student>::iterator it = st.begin(); it != st.end(); ++it)
     {
-        std::string n, sur;
-        n = (it)->nameo();
-        sur = (it)->surnameo();
-        input << n << " " << sur << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            int grade = (it)->Hgradeo(j);
-            input << grade << " ";
-        }
-        int e = (it)->Egradeo();
-        std::string word = (it)->typeo();
 
-        input << e << " ";
-        input << word << std::endl;
+
+        input << *it << std::endl;
     }
 
     for(std::list<Student>::iterator it = winner.begin(); it != winner.end(); ++it)
     {
-        std::string n, sur;
-        n = (it)->nameo();
-        sur = (it)->surnameo();
-        input << n << " " << sur << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            int grade = (it)->Hgradeo(j);
-            input << grade << " ";
-        }
-        int e = (it)->Egradeo();
-        std::string word = (it)->typeo();
 
-        input << e << " ";
-        input << word << std::endl;
+        input << *it << std::endl;
     }
-    input.close();*/
+    input.close();
 
 }
 
-/**
- * Used for checking performance when pushing winners to another container and erasing them from the main container, but without using
- * algorithms
- * @param quantity
- * @param k
- * @param w
- */
-
 void ContainerL2Unoptimized(size_t quantity, std::string k, std::string w)
 {
-    /*std::list<Student> st;
+    std::list<Student> st;
     std::list<Student> winner;
     Student s;
 
@@ -268,7 +222,6 @@ void ContainerL2Unoptimized(size_t quantity, std::string k, std::string w)
             file >> grade;
             s.Hgradei(grade);
             vidurkis += grade;
-            //std::cout << s.Hgrade[j] << std::endl;
         }
 
         type = vidurkis / 5.0 >= 6.0 ? "Winner" : "Loser";
@@ -330,5 +283,5 @@ void ContainerL2Unoptimized(size_t quantity, std::string k, std::string w)
         input << word << std::endl;
     }
     input.close();
-*/
+
 }

@@ -3,15 +3,8 @@
 //
 #include "functions.h"
 
-/**
- * Used for checking performance when pushing students to 2 diffeent contianers losers and winners
- * @param quantity
- * @param k
- * @param w
- */
-
 void ContainerD(size_t quantity, std::string k, std::string w)
-{/*
+{
     std::string name;
     std::string surname;
     std::string type;
@@ -73,40 +66,21 @@ void ContainerD(size_t quantity, std::string k, std::string w)
     file.close();
     std::ofstream input;
     input.open(w);
-    for(size_t i = 0; i < loser.size(); i++)
+    for(auto i = 0; i < loser.size(); i++)
     {
-        input << loser[i].nameo() << " " << loser[i].surnameo() << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            input << loser[i].Hgradeo(j) << " ";
-        }
-        input << loser[i].Egradeo() << " ";
-        input << loser[i].typeo() << std::endl;
+        input << loser[i] << std:: endl;
     }
-    for(size_t i = 0; i < winner.size(); i++)
+    for(auto i = 0; i < winner.size(); i++)
     {
-        input << winner[i].nameo() << " " << winner[i].surnameo() << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            input << winner[i].Hgradeo(j) << " ";
-        }
-        input << winner[i].Egradeo() << " ";
-        input << winner[i].typeo() << std::endl;
+        input << winner[i] << std::endl;
     }
-    input.close();*/
+    input.close();
 
 }
 
-/**
- * Used for checking performance when pushing winners to another container and erasing them from the main container
- * @param quantity
- * @param k
- * @param w
- */
-
 void ContainerD2(size_t quantity, std::string k, std::string w)
 {
-   /* std::string name;
+    std::string name;
     std::string surname;
     std::string type;
     int grade2;
@@ -164,40 +138,20 @@ void ContainerD2(size_t quantity, std::string k, std::string w)
     file.close();
     std::ofstream input;
     input.open(w);
-    for(size_t i = 0; i < s.size(); i++)
+    for(auto i = 0; i < s.size(); i++)
     {
-        input << s[i].nameo() << " " << s[i].surnameo() << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            input << s[i].Hgradeo(j) << " ";
-        }
-        input << s[i].Egradeo() << " ";
-        input << s[i].typeo() << std::endl;
+        input << s[i] << std::endl;
     }
-    for(size_t i = 0; i < winner.size(); i++)
+    for(auto i = 0; i < winner.size(); i++)
     {
-        input << winner[i].nameo() << " " << winner[i].surnameo() << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            input << winner[i].Hgradeo(j) << " ";
-        }
-        input << winner[i].Egradeo() << " ";
-        input << winner[i].typeo() << std::endl;
+        input << winner[i] << std::endl;
     }
     input.close();
-*/
+
 }
 
-/**
- * Used for checking performance when pushing winners to another container and erasing them from the main container, but without using
- * algorithms
- * @param quantity
- * @param k
- * @param w
- */
-
 void ContainerD2Unoptimized(size_t quantity, std::string k, std::string w)
-{/*
+{
     std::string name;
     std::string surname;
     std::string type;
@@ -260,7 +214,7 @@ void ContainerD2Unoptimized(size_t quantity, std::string k, std::string w)
     file.close();
     std::ofstream input;
     input.open(w);
-    for(size_t i = 0; i < s.size(); i++)
+    for(auto i = 0; i < s.size(); i++)
     {
         input << s[i].nameo() << " " << s[i].surnameo() << " ";
         for(size_t j = 0; j < 5; j++)
@@ -270,7 +224,7 @@ void ContainerD2Unoptimized(size_t quantity, std::string k, std::string w)
         input << s[i].Egradeo() << " ";
         input << s[i].typeo() << std::endl;
     }
-    for(size_t i = 0; i < winner.size(); i++)
+    for(auto i = 0; i < winner.size(); i++)
     {
         input << winner[i].nameo() << " " << winner[i].surnameo() << " ";
         for(size_t j = 0; j < 5; j++)
@@ -281,7 +235,7 @@ void ContainerD2Unoptimized(size_t quantity, std::string k, std::string w)
         input << winner[i].typeo() << std::endl;
     }
     input.close();
-*/
+
 }
 
 

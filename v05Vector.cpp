@@ -1,11 +1,4 @@
 #include "sorting.h"
-//#include "struct.h"
-/**
- * Function used to sort students with vector container
- * @param quantity
- * @param k
- * @param w
- */
 void Sorting(size_t quantity, std::string k, std::string w)
 {
     int grade;
