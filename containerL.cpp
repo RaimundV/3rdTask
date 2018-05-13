@@ -6,8 +6,6 @@
 void ContainerL(size_t quantity, std::string k, std::string w)
 {
     std::list<Student> st;
-    std::list<Student> winner;
-    std::list<Student> loser;
     Student s;
     std::string name;
     std::string surname;
@@ -40,7 +38,6 @@ void ContainerL(size_t quantity, std::string k, std::string w)
             file >> grade;
             s.Hgradei(grade);
             vidurkis += grade;
-            //std::cout << s.Hgrade[j] << std::endl;
         }
 
         type = vidurkis / 5.0 >= 6.0 ? "Winner" : "Loser";
@@ -51,17 +48,10 @@ void ContainerL(size_t quantity, std::string k, std::string w)
         s = {};
     }
 
-    for(std::list<Student>::iterator it = st.begin(); it !=st.end(); ++it)
-    {
-        if(it->typeo() == "Winner")
-        {
-            winner.push_back(*it);
-        }
-        else
-        {
-            loser.push_back(*it);
-        }
-    }
+    std::list<Student>::iterator bound;
+    bound = std::partition(st.begin(), st.end(), IsWinner);
+    std::list<Student> winner(st.begin(), bound);
+    std::list<Student> loser(bound, st.end());
 
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
     duration<double, std::milli> time_span = t2 - t1;
@@ -111,7 +101,6 @@ void ContainerL(size_t quantity, std::string k, std::string w)
 void ContainerL2(size_t quantity, std::string k, std::string w)
 {
     std::list<Student> st;
-    std::list<Student> winner;
     Student s;
     std::string name;
     std::string surname;
@@ -154,13 +143,9 @@ void ContainerL2(size_t quantity, std::string k, std::string w)
         s = {};
     }
 
-    for(std::list<Student>::iterator it = st.begin(); it !=st.end(); ++it)
-    {
-        if(it->typeo() == "Winner")
-        {
-            winner.push_back(*it);
-        }
-    }
+    std::list<Student>::iterator bound;
+    bound = std::partition(st.begin(), st.end(), IsWinner);
+    std::list<Student> winner(st.begin(), bound);
     st.erase( std::remove_if(st.begin(), st.end(), IsWinner), st.end() );
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
     duration<double, std::milli> time_span = t2 - t1;
@@ -170,14 +155,11 @@ void ContainerL2(size_t quantity, std::string k, std::string w)
     input.open(w);
     for(std::list<Student>::iterator it = st.begin(); it != st.end(); ++it)
     {
-
-
         input << *it << std::endl;
     }
 
     for(std::list<Student>::iterator it = winner.begin(); it != winner.end(); ++it)
     {
-
         input << *it << std::endl;
     }
     input.close();
@@ -249,38 +231,12 @@ void ContainerL2Unoptimized(size_t quantity, std::string k, std::string w)
     input.open(w);
     for(std::list<Student>::iterator it = st.begin(); it != st.end(); ++it)
     {
-        std::string n, sur;
-        n = (it)->nameo();
-        sur = (it)->surnameo();
-        input << n << " " << sur << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            int grade = (it)->Hgradeo(j);
-            input << grade << " ";
-        }
-        int e = (it)->Egradeo();
-        std::string word = (it)->typeo();
-
-        input << e << " ";
-        input << word << std::endl;
+        input << *it << std::endl;
     }
 
     for(std::list<Student>::iterator it = winner.begin(); it != winner.end(); ++it)
     {
-        std::string n, sur;
-        n = (it)->nameo();
-        sur = (it)->surnameo();
-        input << n << " " << sur << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            int grade = (it)->Hgradeo(j);
-            input << grade << " ";
-        }
-        int e = (it)->Egradeo();
-        std::string word = (it)->typeo();
-
-        input << e << " ";
-        input << word << std::endl;
+        input << *it << std::endl;
     }
     input.close();
 

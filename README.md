@@ -121,6 +121,16 @@ Using class and flags:
 | 4 | 0.0410261 | 0.0240179 | 0.0220142
 | 5 | 0.335234 | 0.251181 | 0.230163
 
+Using class and flags (added partition algorithm):
+
+| Nr. | Vector | Deque | List
+| :---: | :---: | :---: | :---:
+| 1 | 0 | 0 | 0
+| 2 | 0 | 0 | 0
+| 3 | 0 | 0 | 0
+| 4 | 0.0312516 | 0.0625036 | 0.0203105
+| 5 | 0.335535 | 0.320121 | 0.232919
+
 ##### Strategy Nr. 2:
 
 | Nr. | Vector | Deque | List
@@ -150,6 +160,16 @@ Using class and flags:
 | 3 | 0.0040024 | 0.0020192 | 0.0040024
 | 4 | 0.0250157 | 0.019995 | 0.0240148
 | 5 | 0.394278 | 0.212147 | 0.295227
+
+Using class and flags (added partition algorithm):
+
+| Nr. | Vector | Deque | List
+| :---: | :---: | :---: | :---:
+| 1 | 0 | 0 | 0
+| 2 | 0 | 0 | 0
+| 3 | 0.0039998 | 0 | 0
+| 4 | 0.0312654 | 0.0156258 | 0.028874
+| 5 | 0.386718 | 0.21876 | 0.347267
 
 #### 6. Check container performance without arguments
 1. Gets student information from files that were generated in step 3.

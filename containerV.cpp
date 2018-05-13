@@ -2,7 +2,6 @@
 // Created by 123 on 2018-03-31.
 //
 #include "functions.h"
-//#include "struct.h"
 
 bool IsWinner(const Student& s)
 {
@@ -184,17 +183,17 @@ void ContainerV2Unoptimized(size_t quantity, std::string k, std::string w)
         file >> grade2;
         s[i].Egradei(grade2);
     }
-    size_t  i = 0;
-    while (i != s.size())
+    size_t  j = 0;
+    while (j != s.size())
     {
-        if(s[i].typeo() == "Winner")
+        if(s[j].typeo() == "Winner")
         {
-            winner.push_back(s[i]);
-            s.erase(s.begin() + i);
+            winner.push_back(s[j]);
+            s.erase(s.begin() + j);
         }
         else
         {
-            i++;
+            j++;
         }
     }
     s.erase( std::remove_if(s.begin(), s.end(), IsWinner), s.end() );
@@ -206,23 +205,11 @@ void ContainerV2Unoptimized(size_t quantity, std::string k, std::string w)
     input.open(w);
     for(auto i = 0; i < s.size(); i++)
     {
-        input << s[i].nameo() << " " << s[i].surnameo() << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            input << s[i].Hgradeo(j) << " ";
-        }
-        input << s[i].Egradeo() << " ";
-        input << s[i].typeo() << std::endl;
+        input << s[i] << std::endl;
     }
     for(auto i = 0; i < winner.size(); i++)
     {
-        input << winner[i].nameo() << " " << winner[i].surnameo() << " ";
-        for(size_t j = 0; j < 5; j++)
-        {
-            input << winner[i].Hgradeo(j) << " ";
-        }
-        input << winner[i].Egradeo() << " ";
-        input << winner[i].typeo() << std::endl;
+        input << winner[i] << std::endl;
     }
     input.close();
 
