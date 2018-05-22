@@ -1,5 +1,0 @@
-4
-Vysockij Raimund 10 9 8 7 10 8
-Likas Vakaris 9 9 9 9 9 9
-Pocius Paulius 8 9 10 6 10 9
-Makevicius Augustinas 7 10 8 5 4 6

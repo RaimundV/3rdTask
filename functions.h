@@ -41,7 +41,7 @@ public:
      */
     Student () : name(""), surname(""), Hgrade(0), Egrade(0), type("") {};
     /**
-     * Constructor with 2 iterators for copying (moving) student information
+     * Constructor with 2 iterators for copying student information
      * @param it
      * @param it2
      */
@@ -224,5 +224,6 @@ void ContainerL2Unoptimized(size_t quantity, std::string k, std::string w);
  * @return
  */
 bool IsWinner(const Student& s);
+
 
 #endif //DARBAS2_FUNCTIONS_H

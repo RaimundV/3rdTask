@@ -1,45 +1,40 @@
 
 #include "fun.h"
-int main()
+#define CATCH_CONFIG_RUNNER
+#include "Catch.h"
+int main(int argc, char* argv[])
 {
-    int homeworkquantity = 5;
-    const double proc1 = 0.4;
-    const double proc2 = 0.6;
-    int option3 = 0;
-    do
-    {
-        std::cout << "1. Enter grades yourself\n2. Get grades from table\n3. Generate student files\n"
-                "4. Check performance\n5. Check container performance\n6. Check container performance without arguments\nEnter option: ";
-        option3 = Check(1, 6);
+    std::cout << "Generate student files" << std::endl;
+    print();
+    std::cout << "Check performance" << std::endl;
+    PerformanceCheck();
+    std::cout << "check container performance" << std::endl;
+    ContainerPerformanceCheck(5); // Change to 6 so the programme runs the containers without algorithms
+    Catch::Session session; // There must be exactly one instance
 
-        if(option3 == 2)
-        {
-            fun(homeworkquantity, proc1, proc2);
-        }
+    int height = 0; // Some user variable you want to be able to set
 
-        if(option3 == 1)
-        {
-            fun2(proc1, proc2);
-        }
-        if(option3 == 3)
-        {
-            print();
-        }
-        if(option3 == 4)
-        {
-            PerformanceCheck();
-        }
-        if(option3 == 5 || option3 == 6)
-        {
-            ContainerPerformanceCheck(option3);
-        }
+    // Build a new parser on top of Catch's
+    using namespace Catch::clara;
+    auto cli
+            = session.cli() // Get Catch's composite command line parser
+              | Opt( height, "height" ) // bind variable to a new option, with a hint string
+              ["-g"]["--height"]    // the option names it will respond to
+                      ("how high?");        // description string for the help output
 
-        std::cout << "Do you want to continue?\n1. Yes\n2. No\n";
-        option3 = Check(1, 2);
+    // Now pass the new composite back to Catch so it uses that
+    session.cli( cli );
 
-    }while(option3 != 2);
+    // Let Catch (using Clara) parse the command line
+    int returnCode = session.applyCommandLine( argc, argv );
+    if( returnCode != 0 ) // Indicates a command line error
+        return returnCode;
 
+    // if set on the command line then 'height' is now set at this point
+    if( height > 0 )
+        std::cout << "height: " << height << std::endl;
 
-    return 0;
+    return session.run();
+    //return 0;
 }
 

@@ -5,14 +5,9 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-O3 -Ofast")
 
 add_executable(Darbas2
-        filefunction.cpp
         fun.h
-        GradeCheck.cpp
-        IntegerCheck.cpp
         main.cpp
-        mainwithvectors.cpp
         sorting.h
-        v01fun.cpp
         v04.cpp
         v05.cpp
         v05Deque.cpp
@@ -23,4 +18,5 @@ add_executable(Darbas2
 		containerV.cpp
 		containerD.cpp
 		containerL.cpp
-		)
+		"unit test.cpp"
+		Catch.h)

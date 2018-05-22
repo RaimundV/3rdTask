@@ -12,9 +12,6 @@ void ContainerD(size_t quantity, std::string k, std::string w)
     int grade;
 
     std::deque<Student> s;
-    //std::deque<Student> winner;
-    //std::deque<Student> loser;
-
     using namespace std::chrono;
     std::ifstream file;
     file.open(k);
