@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['performancecheck',['PerformanceCheck',['../fun_8h.html#a175f8c41296c84ab359b098748881916',1,'PerformanceCheck():&#160;v05.cpp'],['../v05_8cpp.html#a175f8c41296c84ab359b098748881916',1,'PerformanceCheck():&#160;v05.cpp']]],
-  ['print',['print',['../fun_8h.html#a388f572c62279f839ee138a9afbdeeb5',1,'print():&#160;v04.cpp'],['../v04_8cpp.html#a388f572c62279f839ee138a9afbdeeb5',1,'print():&#160;v04.cpp']]]
+  ['lastassertionpassed',['lastAssertionPassed',['../struct_catch_1_1_i_result_capture.html#a973435fbdcb2f6f07a0ec5719a01e956',1,'Catch::IResultCapture']]],
+  ['lazyexpression',['LazyExpression',['../class_catch_1_1_lazy_expression.html#a47186c2487bd4bf871e870ba8048553a',1,'Catch::LazyExpression::LazyExpression(bool isNegated)'],['../class_catch_1_1_lazy_expression.html#ab82d5e94df0e159b018fbde0170e46f8',1,'Catch::LazyExpression::LazyExpression(LazyExpression const &amp;other)']]]
 ];

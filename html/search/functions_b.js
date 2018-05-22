@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['sorting',['Sorting',['../sorting_8h.html#ad438334f18f9f8cfa66753dedcd2a7ab',1,'Sorting(size_t quantity, std::string k, std::string w):&#160;v05Vector.cpp'],['../v05_vector_8cpp.html#ad438334f18f9f8cfa66753dedcd2a7ab',1,'Sorting(size_t quantity, std::string k, std::string w):&#160;v05Vector.cpp']]],
-  ['sortingd',['SortingD',['../sorting_8h.html#a6552b155b8320b69dcf324254ee2e0b0',1,'SortingD(size_t quantity, std::string k, std::string w):&#160;v05Deque.cpp'],['../v05_deque_8cpp.html#a6552b155b8320b69dcf324254ee2e0b0',1,'SortingD(size_t quantity, std::string k, std::string w):&#160;v05Deque.cpp']]],
-  ['sortingl',['SortingL',['../sorting_8h.html#abd38848beab389ed821a1c5388bb70db',1,'SortingL(size_t quantity, std::string k, std::string w):&#160;v05List.cpp'],['../v05_list_8cpp.html#abd38848beab389ed821a1c5388bb70db',1,'SortingL(size_t quantity, std::string k, std::string w):&#160;v05List.cpp']]],
-  ['student',['Student',['../class_student.html#af9168cedbfa5565cf0b20c1a9d3f5c9d',1,'Student::Student()'],['../class_student.html#a7383aec255734d65bad85ac2fca0c392',1,'Student::Student(std::vector&lt; Student &gt;::iterator it, std::vector&lt; Student &gt;::iterator it2)'],['../class_student.html#af9168cedbfa5565cf0b20c1a9d3f5c9d',1,'Student::Student()'],['../class_student.html#a7383aec255734d65bad85ac2fca0c392',1,'Student::Student(std::vector&lt; Student &gt;::iterator it, std::vector&lt; Student &gt;::iterator it2)']]],
-  ['surnamei',['surnamei',['../class_student.html#ac0d822c3493421718267fc7826bfa230',1,'Student::surnamei(std::string &amp;ssurname)'],['../class_student.html#ac0d822c3493421718267fc7826bfa230',1,'Student::surnamei(std::string &amp;ssurname)']]],
-  ['surnameo',['surnameo',['../class_student.html#a30a873c72b13b5b56af32f30cbd16cfb',1,'Student::surnameo() const'],['../class_student.html#a30a873c72b13b5b56af32f30cbd16cfb',1,'Student::surnameo() const']]]
+  ['nameandtags',['NameAndTags',['../struct_catch_1_1_name_and_tags.html#ab585111e615ce8c504a2b9630de8ee94',1,'Catch::NameAndTags']]],
+  ['namei',['namei',['../class_student.html#a452b7a670c4190c8de4bc6dcde7567e0',1,'Student::namei(std::string &amp;sname)'],['../class_student.html#a452b7a670c4190c8de4bc6dcde7567e0',1,'Student::namei(std::string &amp;sname)']]],
+  ['nameo',['nameo',['../class_student.html#a7970f21afe37ea70a6c35a5c5ad0373e',1,'Student::nameo() const'],['../class_student.html#a7970f21afe37ea70a6c35a5c5ad0373e',1,'Student::nameo() const']]],
+  ['needsmoreiterations',['needsMoreIterations',['../class_catch_1_1_benchmark_looper.html#a97bd944521f519b1593a5d1d2f9998fa',1,'Catch::BenchmarkLooper']]],
+  ['noncopyable',['NonCopyable',['../class_catch_1_1_non_copyable.html#a4b492dd5753f9952350fb64dc6cb9fe2',1,'Catch::NonCopyable']]],
+  ['numberofcharacters',['numberOfCharacters',['../class_catch_1_1_string_ref.html#a6a6cac7430e626ffdd7550a081e8168f',1,'Catch::StringRef']]]
 ];

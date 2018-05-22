@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name',['Name',['../struct_grades.html#a35a5845fe4e33118d992d4b6c726b2bf',1,'Grades']]]
+  ['error',['error',['../struct_catch_1_1_totals.html#a6ea14c7de7ea735a14f172a26e08a239',1,'Catch::Totals']]]
 ];
