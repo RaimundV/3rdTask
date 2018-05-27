@@ -168,3 +168,40 @@ Unit Test was done with Catch2. It just checks if the function that checks if a 
 1. In input files where grades are supposed to be only write **integers**.
 2. In this ReadME file every * symbol is some kind of number between 1-5.
 3. Files generated in step 3 can be found in "wow*.txt" files.
+
+## cOOl StuFF
+
+### UNIT TESTS!!!!
+
+```C++
+#define CATCH_CONFIG_RUNNER
+#include "Catch.h"
+
+int main(int argc, char* argv[])
+{
+	Catch::Session session;
+    int returnCode = session.applyCommandLine( argc, argv );
+    if( returnCode != 0 )
+        return returnCode;
+
+    return session.run();
+}
+```
+
+```C++
+TEST_CASE("Is he a Winner", "[IsWinner]"){
+    Student s;
+    std::string win = "Winner";
+    s.typei(win);
+    REQUIRE(IsWinner(s) == true);
+    std::string lose = "Loser";
+    s.typei(lose);
+    REQUIRE(IsWinner(s) == true);
+}
+TEST_CASE("Is he a Winner2", "[IsWinner]"){
+    Student s;
+    std::string win = "Winner";
+    s.typei(win);
+    REQUIRE(IsWinner(s) == true);
+}
+```
