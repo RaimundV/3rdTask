@@ -15,7 +15,7 @@ Or clone with gitbash.
 ## How to use
 
 Run the program and all the needed functions run.
-```
+
 #### 1. Generate student files
 1. Generates files with 10, 100, 1000, 10000, 100000 Student grades and measures the time taken.
 
