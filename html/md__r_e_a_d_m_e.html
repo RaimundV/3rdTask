@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>html: Second OOP Task</title>
+<title>My Project: Second OOP Task</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">html
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -73,25 +73,10 @@ $(function() {
 <li>Unzip.</li>
 <li>Open the folder as a project in some C++ IDE.</li>
 </ol>
+<p>Or clone with gitbash.</p>
 <h2>How to use</h2>
-<h3>1. Menu:</h3>
-<div class="fragment"><div class="line">1. Enter grades yourself</div><div class="line">2. Get grades from table</div><div class="line">3. Generate student files</div><div class="line">4. Check performance</div><div class="line">5. Check container performance</div><div class="line">6. Check container performance without arguments</div><div class="line">Enter option:</div></div><!-- fragment --><h4>1. Enter grades yourself</h4>
-<ol type="1">
-<li>You have to enter your name and surname</li>
-<li>Then you have to choose between: <div class="fragment"><div class="line">1. Enter an unlimited amount of grades</div><div class="line">2. Enter a limited amount of grades</div></div><!-- fragment --></li>
-<li>Enter an unlimited amount of grades: Lets' you enter and unlimited amount of grades until you press 0.</li>
-<li>Enter a limited amount of grades: Lets' you enter the amount of the students homework and then enter the grades.</li>
-<li>When you have entered all the homework grades you have to choose how to count the grades, either as <b>median</b> or as <b>average</b>.</li>
-<li>Enter exam grade.</li>
-<li>You see the students' average grade. <h4>2. Get grades from table</h4>
-</li>
-</ol>
-<ol type="1">
-<li>Takes information from the "Grades.txt" file.</li>
-<li>Counts the students grades with <b>average</b> and <b>median</b>.</li>
-<li>Shows the output in "AVG.txt" file. <h4>3. Generate student files</h4>
-</li>
-</ol>
+<p>Run the program and all the needed functions run.</p>
+<h4>1. Generate student files</h4>
 <ol type="1">
 <li>Generates files with 10, 100, 1000, 10000, 100000 <a class="el" href="class_student.html">Student</a> grades and measures the time taken.</li>
 </ol>
@@ -109,7 +94,7 @@ $(function() {
 <tr class="markdownTableBody" class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">5  </td><td class="markdownTableBodyCenter">0.40932  </td><td class="markdownTableBodyCenter">0.83471   </td></tr>
 </table>
-<h4>4. Check performance(uses sorting algorithms)</h4>
+<h4>2. Check performance(uses sorting algorithms)</h4>
 <ol type="1">
 <li>Gets student information from files that were generated in step 3.</li>
 <li>Checks performance when sorting the students by their types (<b>winners</b> or <b>losers</b>) with different containers: vector, list, deque.</li>
@@ -159,7 +144,7 @@ $(function() {
 <tr class="markdownTableBody" class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">5  </td><td class="markdownTableBodyCenter">0.548388  </td><td class="markdownTableBodyCenter">0.453339  </td><td class="markdownTableBodyCenter">0.336241   </td></tr>
 </table>
-<h4>5. Check container performance(uses more containers to sort the students)</h4>
+<h4>3. Check container performance(uses more containers to sort the students)</h4>
 <ol type="1">
 <li>Gets student information from files that were generated in step 3.</li>
 </ol>
@@ -295,7 +280,7 @@ $(function() {
 <tr class="markdownTableBody" class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">5  </td><td class="markdownTableBodyCenter">0.386718  </td><td class="markdownTableBodyCenter">0.21876  </td><td class="markdownTableBodyCenter">0.347267   </td></tr>
 </table>
-<h4>6. Check container performance without arguments</h4>
+<h4>4. Check container performance without arguments</h4>
 <ol type="1">
 <li>Gets student information from files that were generated in step 3.</li>
 </ol>
@@ -319,13 +304,17 @@ $(function() {
 <tr class="markdownTableBody" class="markdownTableRowOdd">
 <td class="markdownTableBodyCenter">5  </td><td class="markdownTableBodyCenter">443.054  </td><td class="markdownTableBodyCenter">210.47  </td><td class="markdownTableBodyCenter">0.486344   </td></tr>
 </table>
+<h4>5. Unit Test</h4>
+<p>Unit Test was done with Catch2. It just checks if the function that checks if a student is a Winner works properly.</p>
 <h2>Warnings:</h2>
 <ol type="1">
 <li>In input files where grades are supposed to be only write <b>integers</b>.</li>
 <li>In this ReadME file every * symbol is some kind of number between 1-5.</li>
-<li>Files generated in step 3 can be found in "wow*.txt" files. </li>
+<li>Files generated in step 3 can be found in "wow*.txt" files.</li>
 </ol>
-</div></div><!-- contents -->
+<h2>cOOl StuFF</h2>
+<h3>UNIT TESTS!!!!</h3>
+<div class="fragment"><div class="line">{C++}</div><div class="line">#define CATCH_CONFIG_RUNNER</div><div class="line">#include &quot;Catch.h&quot;</div><div class="line"></div><div class="line">int main(int argc, char* argv[])</div><div class="line">{</div><div class="line">    Catch::Session session;</div><div class="line">    int returnCode = session.applyCommandLine( argc, argv );</div><div class="line">    if( returnCode != 0 )</div><div class="line">        return returnCode;</div><div class="line"></div><div class="line">    return session.run();</div><div class="line">}</div></div><!-- fragment --><div class="fragment"><div class="line">{C++}</div><div class="line">TEST_CASE(&quot;Is he a Winner&quot;, &quot;[IsWinner]&quot;){</div><div class="line">    Student s;</div><div class="line">    std::string win = &quot;Winner&quot;;</div><div class="line">    s.typei(win);</div><div class="line">    REQUIRE(IsWinner(s) == true);</div><div class="line">    std::string lose = &quot;Loser&quot;;</div><div class="line">    s.typei(lose);</div><div class="line">    REQUIRE(IsWinner(s) == true);</div><div class="line">}</div><div class="line">TEST_CASE(&quot;Is he a Winner2&quot;, &quot;[IsWinner]&quot;){</div><div class="line">    Student s;</div><div class="line">    std::string win = &quot;Winner&quot;;</div><div class="line">    s.typei(win);</div><div class="line">    REQUIRE(IsWinner(s) == true);</div><div class="line">}</div></div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
