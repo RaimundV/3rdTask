@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['typei',['typei',['../class_student.html#a92399c7da8412412468f48e32927f28d',1,'Student::typei(std::string &amp;stype)'],['../class_student.html#a92399c7da8412412468f48e32927f28d',1,'Student::typei(std::string &amp;stype)']]],
-  ['typeo',['typeo',['../class_student.html#ac80338c7f14d67ffc113aa29be71cf09',1,'Student::typeo() const'],['../class_student.html#ac80338c7f14d67ffc113aa29be71cf09',1,'Student::typeo() const']]]
+  ['filtertests',['filterTests',['../namespace_catch.html#ab5da9aa67c42a3f626aea07d0b556829',1,'Catch']]],
+  ['finalizedescription',['finalizeDescription',['../namespace_catch_1_1_matchers_1_1_generic_1_1_detail.html#a79ef1103073f7a8d31735436d2012835',1,'Catch::Matchers::Generic::Detail']]],
+  ['formatreconstructedexpression',['formatReconstructedExpression',['../namespace_catch.html#a520110c31f26cf9892595772ab814fc0',1,'Catch']]]
 ];
